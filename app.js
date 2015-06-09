@@ -19,8 +19,8 @@ app.use(function(req, res, next) {
     return next();
 });
 
-app.use('/products', require('./controllers/products'));
-app.use('/carts', require('./controllers/carts'));
+app.use('/products', require('./routes/products'));
+app.use('/carts', require('./routes/carts'));
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
