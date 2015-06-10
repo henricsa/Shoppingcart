@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var productModel = require('../models/product.js');
+var expect = require('chai').expect,
+    productModel = require('../models/product.js');
 
 var product = {
     'id': 'product-id',

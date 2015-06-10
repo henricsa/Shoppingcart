@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var cartModel = require('../models/cart.js');
+var expect = require('chai').expect,
+    cartModel = require('../models/cart.js');
 
 var cart = {
   'id': 'cart-id',

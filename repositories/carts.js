@@ -1,8 +1,7 @@
-var _ = require('lodash');
-var cartModel = require('../models/cart');
-var products = require('./products');
-
-var cartsStorage = [];
+var _ = require('lodash'),
+    cartModel = require('../models/cart'),
+    products = require('./products'),
+    cartsStorage = [];
 
 module.exports =  {
     retrieve: function (callback) {
@@ -35,9 +34,8 @@ module.exports =  {
     },
 
     create: function (cart, callback, errback) {
-        cart = cartModel(cart);
-        if (cart.validate()) {
-            cartsStorage.push(cart.toJson());
+        if (cartModel(cart).validate()) {
+            cartsStorage.push(cart);
             callback();
         } else {
             errback();

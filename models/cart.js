@@ -1,5 +1,5 @@
-var _ = require('lodash');
-var productModel = require('../models/product');
+var _ = require('lodash'),
+    productModel = require('../models/product');
 
 module.exports = function (cart) {
     cart = _.cloneDeep(cart || {});

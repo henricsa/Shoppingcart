@@ -1,4 +1,4 @@
-var router = require('./router');
-var cartsRepo = require('../repositories/carts');
+var router = require('./router'),
+    cartsRepo = require('../repositories/carts');
 
 module.exports = router(cartsRepo);

@@ -1,7 +1,6 @@
-var _ = require('lodash');
-var productModel = require('../models/product');
-
-var productsStorage = [];
+var _ = require('lodash'),
+    productModel = require('../models/product'),
+    productsStorage = [];
 
 module.exports =  {
     retrieve: function (callback) {
@@ -28,9 +27,8 @@ module.exports =  {
     },
 
     create: function (product, callback, errback) {
-        product = productModel(product);
-        if (product.validate()) {
-            productsStorage.push(product.toJson());
+        if (productModel(product).validate()) {
+            productsStorage.push(product);
             callback();
         } else {
             errback();
