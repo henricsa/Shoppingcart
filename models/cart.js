@@ -17,6 +17,7 @@ module.exports = function (cart) {
             cartProducts.push(productModel(cartProduct || newProduct)
                                   .addQuantity(quantity)
                                   .toJson());
+                                  
             return this.adjustTotalPrice()
                        .adjustTotalVat();
         },

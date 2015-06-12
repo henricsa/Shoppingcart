@@ -1,5 +1,6 @@
 /// <reference path="typings/node/node.d.ts" />
 /// <reference path="typings/express/express.d.ts"/>
+/// <reference path="typings/lodash/lodash.d.ts"/>
 
 process.env.PORT = 8080;
 
