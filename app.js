@@ -5,15 +5,15 @@ process.env.PORT = 8080;
 
 var express = require('express'),
     bodyParser = require('body-parser'),
-    utils = require('./utils'),
+    middlewares = require('./utils').middlewares,
     app = express();
 
 app.use(bodyParser.json())
    .use(bodyParser.urlencoded({ extended: false }))
-   .use(utils.middlewares.location)
+   .use(middlewares.location)
    .use('/products', require('./routes/products'))
    .use('/carts', require('./routes/carts'))
-   .use(utils.middlewares.notFound)
-   .use(utils.middlewares.errorResponse);
+   .use(middlewares.notFound)
+   .use(middlewares.errorResponse);
 
 module.exports = app;
